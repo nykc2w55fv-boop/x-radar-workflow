@@ -1,0 +1,22 @@
+# 关键词查询模板 —— 复制成 ~/.hermes/x-radar/watch_queries.txt 后改成你自己的
+#
+# 这个通道用 twitterapi.io（按条计费），需要 X-API-Key，所以是可选的。
+# 不填 key 时脚本会打印 SKIP 并 exit 0，不影响其它环节。
+#
+# 语法就是 X 官方的高级搜索语法，一行一条，不要加引号包整行。
+# 常用算子：
+#   lang:zh                    只要中文
+#   -filter:retweets           排除转推
+#   -filter:replies            排除回复
+#   min_faves:50               点赞至少 50
+#   since:2026-01-01           起始日期
+#   关键词 之间空格 = AND，OR 要大写，词组用英文双引号
+#
+# 计费提醒：一条查询返回多少条就按多少条算钱，min_faves 门槛是最省钱的旋钮。
+# 建议先从 min_faves:50 起步，不够再往下调。
+
+"AI agent" (工作流 OR workflow) lang:zh -filter:retweets min_faves:50
+(独立开发 OR 一人公司) lang:zh -filter:retweets min_faves:50
+(出海 OR SaaS) lang:zh -filter:retweets min_faves:30
+(效率工具 OR 自动化) lang:zh -filter:retweets min_faves:50
+(大模型 OR LLM) 商业化 lang:zh -filter:retweets min_faves:50

@@ -1,0 +1,28 @@
+# 监控名单模板 —— 复制成 ~/.hermes/x-radar/watch_accounts.txt 后改成你自己的
+#
+# 格式规则：
+#   · [方括号] 开头的一行 = 分类名，只用于分组显示，随便起
+#   · 其余每一行 = 一个 X 账号名（不要写 @，不要写完整链接）
+#   · # 开头是注释
+#   · 抓取是免费的（走 fxtwitter 公开接口），但每个号之间会 sleep 1.2 秒，
+#     40 个号大约 50 秒。名单越长，跑得越久。
+#
+# 下面这份只是示例，全部是公开大号，请按你自己的赛道替换。
+
+[AI 技术]
+karpathy
+sama
+AnthropicAI
+GoogleDeepMind
+
+[独立开发 / 一人公司]
+levelsio
+marclouvion
+
+[财经 / 宏观]
+RayDalio
+dylan522p
+
+[修身 / 认知]
+JamesClear
+naval
