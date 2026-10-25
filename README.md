@@ -15,6 +15,8 @@
 
 最后你会得到一个 `~/x-reference/` 目录：长文按年月分开，短推按账号按月份合成一篇，带 csv 和 md 两套索引。可以直接丢进 Obsidian、思源、或者任何 grep 得动的编辑器。
 
+![从 clone 到出索引的完整流程，每一步都真跑](assets/demo.gif)
+
 > **English summary**: A six-stage X/Twitter content radar. Scrapes trending long-form rankings, curated AI picks, a watchlist of accounts, keyword searches and full article text, then deduplicates everything into a local Markdown library with indexes. Pure Python standard library (plus headless Chrome for one stage). Works with Codex, Claude Code, Hermes and any agent that can run shell commands. Free for non-commercial use; commercial use requires a paid license.
 
 ---
@@ -24,6 +26,8 @@
 大多数「X 内容抓取」方案死在两个地方：一是把抓取和判断揉在一个大脚本里，接口一改就全废；二是所有数据堆一个文件，抓三个月就再也搜不动。
 
 所以这里故意做成管道：每一环只干一件事，产物是文件，中间断了不影响前面的成果。你甚至可以把某一环换成自己写的，只要产物格式对得上。
+
+![六个环节与数据流向](assets/flow.png)
 
 ## 作者环境实测（跑通后的真实数字，不是估算）
 
@@ -89,6 +93,7 @@ x-radar-workflow/
 │   └── watch_queries.example.txt      关键词模板
 ├── skill/SKILL.md              给 agent 用的技能说明
 ├── AGENTS.md                   给 Codex / Claude Code 的项目约定
+├── assets/                     流程图与演示动图
 ├── .env.example                密钥模板
 └── docs/FAQ.md                 踩坑记录
 ```
